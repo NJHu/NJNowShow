@@ -1,0 +1,45 @@
+PODS:
+  - Alamofire (4.7.2)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
+  - MJRefresh (3.1.15.3)
+  - NJKit (1.0.7):
+    - Alamofire
+    - AlamofireImage
+    - MJRefresh
+    - SnapKit
+    - SwiftyJSON
+  - NJNowShow (1.0.0):
+    - NJKit
+  - SnapKit (4.0.0)
+  - SwiftyJSON (4.1.0)
+
+DEPENDENCIES:
+  - NJNowShow (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - MJRefresh
+    - SnapKit
+    - SwiftyJSON
+  https://github.com/NJHu/NJSpecs.git:
+    - NJKit
+
+EXTERNAL SOURCES:
+  NJNowShow:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  NJKit: 3f2dac6256cf07dc9fc90e86866702cfc2c2e130
+  NJNowShow: b26ce3322e60a3abaaa4094af9fb352b0324240c
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+
+PODFILE CHECKSUM: afe9c58c207d52ad1aa37cd86d9f3828e5c11b7c
+
+COCOAPODS: 1.5.3

@@ -28,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04A93AE734190AEE3EE2814A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		04A93AE734190AEE3EE2814A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		0D50893615F1B8EC2C2C1044 /* Pods-NJNowShow_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJNowShow_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJNowShow_Example/Pods-NJNowShow_Example.release.xcconfig"; sourceTree = "<group>"; };
 		40DD4A9AB310907135FFE6B5 /* Pods_NJNowShow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NJNowShow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A88C4504286A44A7A7ECEF1 /* NJNowShow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = NJNowShow.podspec; path = ../NJNowShow.podspec; sourceTree = "<group>"; };
+		5A88C4504286A44A7A7ECEF1 /* NJNowShow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NJNowShow.podspec; path = ../NJNowShow.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5E95D1FFBAA374381EFB8F35 /* Pods_NJNowShow_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NJNowShow_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* NJNowShow_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJNowShow_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		621E416DB03C036848D9676F /* Pods-NJNowShow_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJNowShow_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NJNowShow_Tests/Pods-NJNowShow_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		796635C081ABE28C7B67E9C6 /* Pods-NJNowShow_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJNowShow_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NJNowShow_Example/Pods-NJNowShow_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8EF5A92FF718CF8BBB605A58 /* Pods-NJNowShow_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJNowShow_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJNowShow_Tests/Pods-NJNowShow_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B176CCF480689B96379183AA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B176CCF480689B96379183AA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,11 +304,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NJNowShow_Example/Pods-NJNowShow_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/NJKit/NJKit.framework",
 				"${BUILT_PRODUCTS_DIR}/NJNowShow/NJNowShow.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NJKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NJNowShow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
