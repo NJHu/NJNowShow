@@ -17,7 +17,7 @@ fileprivate let baseUrl = "http://live.9158.com/Fans/GetHotLive"
 
 class NJNowShowHomeListViewModel: NSObject {
     var nowShowList: [NJNowShow] = [NJNowShow]()
-    private var page: Int = 0
+    private var page: Int = 1
 }
 
 extension NJNowShowHomeListViewModel {
@@ -25,7 +25,7 @@ extension NJNowShowHomeListViewModel {
         
         var urlStr = baseUrl
         
-        let curPage = isMore ? (page + 1) : 0
+        let curPage = isMore ? (page + 1) : 1
         
         NJNetworkTool.sharedTool.GET(urlStr, parameters:["page": curPage, "format": "json"]) {[weak self] (response: NJResponse) in
             

@@ -14,8 +14,8 @@ import NJKit
         let childController = NJNowShowHomeController(tableViewStyle: UITableViewStyle.plain)
         let nav = NJNavigationController(rootViewController: childController)
         
-        childController.tabBarItem.image = UIImage.nj_image(name: "tab_homepage_nor", bundleClass: Target_NJNowShow.self)
-        childController.tabBarItem.selectedImage = UIImage.nj_image(name: "tab_homepage_press", bundleClass: Target_NJNowShow.self)
+        childController.tabBarItem.image = UIImage.nj_image(name: "tab_homepage_press", bundleClass: Target_NJNowShow.self)
+        childController.tabBarItem.selectedImage = UIImage.nj_image(name: "tab_homepage_press", bundleClass: Target_NJNowShow.self)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         childController.tabBarItem.title = "NOWShow"
         childController.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -3);
         

@@ -19,6 +19,7 @@ class NJNowShowHomeController: NJRefreshTableViewController {
         var contentInset = self.tableView.contentInset
         contentInset.bottom += (self.tabBarController?.tabBar.frame.height ?? 0)
         self.tableView.contentInset = contentInset
+        self.tableView.separatorStyle = .none
         navigationItem.title = "热门主播"
     }
     override func loadData(isMore: Bool) {
@@ -37,17 +38,20 @@ class NJNowShowHomeController: NJRefreshTableViewController {
 }
 
 extension NJNowShowHomeController {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70 + UIScreen.main.bounds.size.width + 10
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nowShowHomeListViewModel.nowShowList.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "UITableViewCell")
-        let label = UILabel()
-        label.frame = CGRect(x: 0, y: 0, width: 100, height: 44)
-        label.textColor = UIColor.black
-        cell.contentView.addSubview(label)
-        label.text = nowShowHomeListViewModel.nowShowList[indexPath.row].myname
+        let cell = NJNowShowHomeCell.cell(tableView: tableView)
+        cell.nowShow = nowShowHomeListViewModel.nowShowList[indexPath.row]
+
         return cell
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
