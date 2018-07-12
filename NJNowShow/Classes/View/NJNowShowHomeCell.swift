@@ -117,6 +117,8 @@ extension NJNowShowHomeCell
         countLabel.textColor = UIColor.purple
         countLabel.font = UIFont.boldSystemFont(ofSize: 15)
         locationBtn.isUserInteractionEnabled = false
+        locationBtn.setTitleColor(UIColor.darkGray, for: .normal)
+        locationBtn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
         ingDesLabel.text = "在看"
         mainImageView.contentMode = .scaleAspectFill
         mainImageView.clipsToBounds = true
