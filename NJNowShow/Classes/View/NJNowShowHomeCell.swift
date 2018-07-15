@@ -122,7 +122,7 @@ extension NJNowShowHomeCell
         ingDesLabel.text = "在看"
         mainImageView.contentMode = .scaleAspectFill
         mainImageView.clipsToBounds = true
-        self.selectionStyle = .none
+        self.selectionStyle = .default
     }
 }
 
