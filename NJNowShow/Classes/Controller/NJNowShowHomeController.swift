@@ -8,7 +8,8 @@
 import UIKit
 import NJKit
 import MJRefresh
-import NJNowShowPlay
+import NJMediator
+import NJMediator_NJNowShowPlay
 
 class NJNowShowHomeController: NJRefreshTableViewController {
 
@@ -54,8 +55,9 @@ extension NJNowShowHomeController {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let nowShowPlay = NJNowShowPlayController()
-        nowShowPlay.liveUrl = nowShowHomeListViewModel.nowShowList[indexPath.row].flv;
-        present(nowShowPlay, animated: true, completion: nil)
+        let liveUrl = nowShowHomeListViewModel.nowShowList[indexPath.row].flv
+        if let nowShowPlay = NJMediator.sharedMediator.Mediator_NJNowShowPlayRoom_Controller(liveUrl: liveUrl) {
+            present(nowShowPlay, animated: true, completion: nil)
+        }
     }
 }
