@@ -19,23 +19,26 @@ class NJNowShowHomeCell: UITableViewCell {
     private var ingDesLabel: UILabel = UILabel()
     private var mainImageView: UIImageView = UIImageView()
     var nowShow: NJNowShow? {
-        didSet {
-            guard nowShow != nil else {
-                return
-            }
-            if let url = URL(string: nowShow!.smallpic) {
-                headerImageView.af_setImage(withURL: url)
-            }else {
-                headerImageView.image = nil
-            }
-            nickNameLabel.text = nowShow?.myname
-            locationBtn.setTitle(nowShow?.gps, for: .normal)
-            countLabel.text = nowShow?.allnum
-            if let url = URL(string: nowShow!.bigpic) {
+        willSet {
+            
+            headerImageView.image = UIImage.nj_image(name: "defaulthead70", bundleClass: NJNowShowHomeCell.self)
+            mainImageView.image = UIImage.nj_image(name: "videoDefault", bundleClass: NJNowShowHomeCell.self)
+            
+
+            
+            nickNameLabel.text = newValue?.myname
+            locationBtn.setTitle(newValue?.gps, for: .normal)
+            countLabel.text = newValue?.allnum
+            
+            if newValue != nil, let url = URL(string: newValue!.bigpic) {
+                
                 mainImageView.af_setImage(withURL: url)
-            }else {
-                mainImageView.image = nil
+                
+                if let url = URL(string: newValue!.smallpic) {
+                    headerImageView.af_setImage(withURL: url)
+                }
             }
+            
         }
     }
     
