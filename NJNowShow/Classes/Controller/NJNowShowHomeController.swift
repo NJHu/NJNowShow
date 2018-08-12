@@ -61,3 +61,28 @@ extension NJNowShowHomeController {
         }
     }
 }
+
+// MARK:- StatusBar
+//        setNeedsStatusBarAppearanceUpdate()
+extension NJNowShowHomeController {
+    open override var prefersStatusBarHidden: Bool {
+        return false
+    }
+    open  override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.default
+    }
+    open  override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return UIStatusBarAnimation.slide
+    }
+    open override var shouldAutorotate: Bool {
+        return false
+    }
+    // MARK: - about keyboard orientation
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait;
+    }
+    //返回最优先显示的屏幕方向
+    open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return UIInterfaceOrientation.portrait
+    }
+}
