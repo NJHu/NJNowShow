@@ -20,10 +20,8 @@ s.ios.deployment_target = '10.3'
 s.source_files = 'NJNowShow/Classes/**/*'
 
 s.resource_bundles = {
-'NJNowShow' => ['NJNowShow/Assets/**/*.{plist,webp,png}']
+'NJNowShow' => ['NJNowShow/Assets/**/*.{plist,webp,png,xcassets}']
 }
-
-s.resources     = 'NJNowShow/**/*.{xcassets}'
 
 s.frameworks   = 'UIKit'
 s.dependency 'NJKit'
