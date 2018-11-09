@@ -11,11 +11,11 @@ import NJKit
 @objc class Target_NJNowShow: NSObject {
     @objc func Action_mainViewController(params: [String: AnyObject]) -> UIViewController? {
         
-        let childController = NJNowShowHomeController(tableViewStyle: UITableViewStyle.plain)
+        let childController = NJNowShowHomeController(tableViewStyle: UITableView.Style.plain)
         let nav = NJNavigationController(rootViewController: childController)
         
         childController.tabBarItem.image = UIImage.nj_image(name: "tab_homepage_press", bundleClass: Target_NJNowShow.self)
-        childController.tabBarItem.selectedImage = UIImage.nj_image(name: "tab_homepage_press", bundleClass: Target_NJNowShow.self)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        childController.tabBarItem.selectedImage = UIImage.nj_image(name: "tab_homepage_press", bundleClass: Target_NJNowShow.self)?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         childController.tabBarItem.title = "NOWShow"
         childController.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -3);
         

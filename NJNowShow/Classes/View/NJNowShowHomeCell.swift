@@ -14,7 +14,7 @@ class NJNowShowHomeCell: UITableViewCell {
     
     private var headerImageView: UIImageView = UIImageView()
     private var nickNameLabel: UILabel = UILabel()
-    private var locationBtn: UIButton  = UIButton(type: UIButtonType.custom)
+    private var locationBtn: UIButton  = UIButton(type: UIButton.ButtonType.custom)
     private var countLabel: UILabel = UILabel()
     private var ingDesLabel: UILabel = UILabel()
     private var mainImageView: UIImageView = UIImageView()
@@ -42,7 +42,7 @@ class NJNowShowHomeCell: UITableViewCell {
         }
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
     }
